@@ -349,15 +349,15 @@
         }
 
         function createHearts() {
-            const hearts = ["❤️", "💖", "💕", "✨", "🩷", "🩺", "💉", "🩸", "💊", "🩹", "🩺", "🎀", "🧸"];
-            for (let i = 0; i < 35; i++) {
+            const hearts = ["❤️", "💖", "💛", "💚", "💙", "💜", "🩷", "✨", "🩺", "🩹", "💉", "⭐", "🌟", "🎈"];
+            for (let i = 0; i < 50; i++) {
                 setTimeout(() => {
                     const heart = document.createElement("div");
                     heart.className = "floating-heart";
                     heart.innerText = hearts[Math.floor(Math.random() * hearts.length)];
                     heart.style.left = Math.random() * 100 + "%";
                     heart.style.animationDuration = (4 + Math.random() * 4) + "s";
-                    heart.style.fontSize = (14 + Math.random() * 35) + "px";
+                    heart.style.fontSize = (14 + Math.random() * 22) + "px";
                     document.body.appendChild(heart);
                     setTimeout(() => heart.remove(), 8000);
                 }, i * 90);
