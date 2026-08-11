@@ -21,7 +21,7 @@
         <div class="loader-inner">
             <div class="pulse-ring"><i class="fa-solid fa-heart-pulse"></i></div>
             <p class="loader-label">CHART PREPARED FOR</p>
-            <h3>Dr. Samiha <span>(in training)</span></h3>
+            <h3>Dr. Samiha <span></span></h3>
         </div>
     </div>
 
@@ -37,7 +37,7 @@
         <i class="fa-solid fa-play"></i>
     </button>
     <audio id="birthdayMusic" loop>
-        <source src="birthday-song.mp3" type="audio/mpeg">
+        <source src="WhatsApp Audio 2026-08-11 at 6.16.06 PM.mp4" type="audio/mpeg">
     </audio>
 
     <!-- ===== HERO ===== -->
@@ -110,15 +110,15 @@
 
             <div class="chart-tag">
                 <span class="tag-dot"></span>
-                PATIENT FILE
+                Doctor File
             </div>
 
             <p class="entry-date">ANOTHER YEAR OF YOU</p>
 
-            <h1>Happy Birthday,<br><span>Samiha.</span></h1>
+            <h1>Happy Birthday <br><span>Samiha.</span></h1>
 
             <p class="hero-sub">
-                Somewhere between the lecture halls and the late‑night flashcards,
+                Somewhere between the lecture halls and the late night flashcards,
                 you're quietly becoming the doctor this world will be lucky to have.
                 Today, the only prescription is to feel exactly how loved you are.
             </p>
@@ -145,8 +145,8 @@
 
             <div class="letter-sheet">
                 <div class="letter-header">
-                    <span>ATTENDING: Your Favorite Person</span>
-                    <span>PATIENT: Samiha</span>
+                    <span>FROM: Your Favorite Person</span>
+                    <span>TO: Samiha</span>
                 </div>
                 <div class="letter-body">
                     <p>Happy birthday to one of the most wonderful people I know.</p>
@@ -163,7 +163,7 @@
                     <p>Keep studying. Keep dreaming. Keep smiling like you mean it.<br>Never forget how special you are.
                     </p>
                 </div>
-                <div class="letter-sign">With all my heart <span>— Your Favorite Person</span></div>
+                <div class="letter-sign">With all my heart <span>Abdullah Al Zobayer </span></div>
             </div>
         </div>
     </section>
@@ -242,27 +242,27 @@
     <!-- ===== GALLERY ===== -->
     <section class="section">
         <div class="container">
-            <div class="eyebrow"><i class="fa-solid fa-images"></i> IMAGING RESULTS</div>
+            <div class="eyebrow"><i class="fa-solid fa-images"></i> BIRTHDAY Girl</div>
             <h2 class="section-title">Moments on file.</h2>
 
             <div class="gallery">
                 <div class="photo"><img src="pic1.jpg" alt="Memory 1">
-                    <div class="photo-tag">01</div>
+                    <div class="photo-tag"></div>
                 </div>
                 <div class="photo"><img src="pic2.jpg" alt="Memory 2">
-                    <div class="photo-tag">02</div>
+                    <div class="photo-tag"></div>
                 </div>
                 <div class="photo"><img src="pic3.1.jpg" alt="Memory 3">
-                    <div class="photo-tag">03</div>
+                    <div class="photo-tag"></div>
                 </div>
                 <div class="photo"><img src="pic3.jpg" alt="Memory 4">
-                    <div class="photo-tag">04</div>
+                    <div class="photo-tag"></div>
                 </div>
                 <div class="photo"><img src="pic4.jpg" alt="Memory 5">
-                    <div class="photo-tag">05</div>
+                    <div class="photo-tag"></div>
                 </div>
                 <div class="photo"><img src="pic5.jpg" alt="Memory 6">
-                    <div class="photo-tag">06</div>
+                    <div class="photo-tag"></div>
                 </div>
             </div>
         </div>
@@ -300,7 +300,7 @@
                 <div id="giftMessage" class="gift-message">
                     <div class="gift-heart"><i class="fa-solid fa-heart"></i></div>
                     <p>
-                        আজ যদি তোমাকে কোনো উপহার দিতে পারতাম, তবে তা হতো—যারা তোমাকে ভালোবাসে, তারা তোমাকে যেভাবে দেখে,
+                        আজ যদি তোমাকে কোনো উপহার দিতে পারতাম, তবে তা হতো যারা তোমাকে ভালোবাসে, তারা তোমাকে যেভাবে দেখে,
                         ঠিক সেভাবে নিজেকে দেখার ক্ষমতা। তখন তুমি বুঝতে পারতে তুমি কতটা অনন্য।
 
                         নিজের স্বপ্নের পেছনে ছুটে চলো, হবু ডাক্তার সামিহা।
@@ -349,15 +349,15 @@
         }
 
         function createHearts() {
-            const hearts = ["❤️", "💖", "💕", "✨", "🩷"];
-            for (let i = 0; i < 22; i++) {
+            const hearts = ["❤️", "💖", "💕", "✨", "🩷", "🩺", "💉", "🩸", "💊", "🩹", "🩺", "🎀", "🧸"];
+            for (let i = 0; i < 35; i++) {
                 setTimeout(() => {
                     const heart = document.createElement("div");
                     heart.className = "floating-heart";
                     heart.innerText = hearts[Math.floor(Math.random() * hearts.length)];
                     heart.style.left = Math.random() * 100 + "%";
                     heart.style.animationDuration = (4 + Math.random() * 4) + "s";
-                    heart.style.fontSize = (14 + Math.random() * 22) + "px";
+                    heart.style.fontSize = (14 + Math.random() * 35) + "px";
                     document.body.appendChild(heart);
                     setTimeout(() => heart.remove(), 8000);
                 }, i * 90);
