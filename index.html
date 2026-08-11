@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Samiha — Future Doctor</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="loader" id="loader">
+        <div class="loader-inner">
+            <div class="pulse-ring"><i class="fa-solid fa-heart-pulse"></i></div>
+            <p class="loader-label">CHART PREPARED FOR</p>
+            <h3>Dr. Samiha <span>(in training)</span></h3>
+        </div>
+    </div>
+
+    <div class="grain"></div>
+    <div class="vitals-line" id="vitalsLine">
+        <svg viewBox="0 0 1400 100" preserveAspectRatio="none">
+            <polyline
+                points="0,50 140,50 175,50 200,10 225,90 250,50 350,50 385,50 405,35 420,65 435,50 540,50 565,50 590,5 615,95 640,50 750,50 780,50 800,25 815,75 830,50 930,50 960,50 980,10 1000,90 1020,50 1130,50 1160,50 1180,35 1195,65 1210,50 1400,50" />
+        </svg>
+    </div>
+
+    <button class="music-btn" onclick="playMusic()" id="musicButton" aria-label="Play birthday song">
+        <i class="fa-solid fa-play"></i>
+    </button>
+    <audio id="birthdayMusic" loop>
+        <source src="birthday-song.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+        <div class="hero-inner">
+
+            <div class="doctor-doll" aria-hidden="true">
+                <svg viewBox="0 0 240 260" xmlns="http://www.w3.org/2000/svg">
+                    <ellipse class="doll-shadow" cx="120" cy="246" rx="58" ry="10" />
+
+                    <g class="doll-bob">
+                        <!-- ponytail -->
+                        <path class="doll-hair-back"
+                            d="M84 58 C70 66 66 90 78 104 C70 108 66 118 72 126 C64 122 56 108 60 92 C62 74 70 60 84 58 Z" />
+
+                        <!-- coat body -->
+                        <path class="doll-coat"
+                            d="M76 150 C76 122 96 108 120 108 C144 108 164 122 164 150 L170 214 C170 226 160 234 148 234 L92 234 C80 234 70 226 70 214 Z" />
+                        <!-- coat lapels -->
+                        <path class="doll-lapel" d="M120 112 L104 152 L120 146 L136 152 Z" />
+                        <!-- collar shirt -->
+                        <rect class="doll-shirt" x="112" y="110" width="16" height="22" rx="3" />
+
+                        <!-- stethoscope -->
+                        <g class="doll-stetho">
+                            <path d="M98 120 C90 130 90 146 100 152 C106 156 114 154 116 146" />
+                            <path d="M142 120 C150 130 150 146 140 152 C134 156 126 154 124 146" />
+                            <circle cx="118" cy="160" r="7" />
+                        </g>
+
+                        <!-- arms -->
+                        <path class="doll-coat" d="M76 150 C64 154 56 168 58 184 C60 194 68 198 76 194 L82 176 Z" />
+                        <path class="doll-coat"
+                            d="M164 150 C176 154 184 168 182 184 C180 194 172 198 164 194 L158 176 Z" />
+
+                        <!-- head -->
+                        <circle class="doll-face" cx="120" cy="78" r="42" />
+
+                        <!-- hair front -->
+                        <path class="doll-hair"
+                            d="M78 66 C78 40 100 26 120 26 C142 26 162 42 162 66 C162 52 148 44 132 46 C118 48 108 44 100 50 C90 56 82 60 78 66 Z" />
+                        <path class="doll-hair" d="M86 60 C90 52 100 48 108 50" />
+
+                        <!-- headband/clip -->
+                        <circle class="doll-clip" cx="148" cy="50" r="4" />
+
+                        <!-- ears -->
+                        <circle class="doll-face" cx="80" cy="82" r="7" />
+                        <circle class="doll-face" cx="160" cy="82" r="7" />
+
+                        <!-- blush -->
+                        <ellipse class="doll-blush" cx="96" cy="92" rx="7" ry="4.5" />
+                        <ellipse class="doll-blush" cx="144" cy="92" rx="7" ry="4.5" />
+
+                        <!-- eyes -->
+                        <g class="doll-eyes">
+                            <path class="doll-eye" d="M92 78 Q98 72 104 78" />
+                            <path class="doll-eye" d="M136 78 Q142 72 148 78" />
+                        </g>
+
+                        <!-- smile -->
+                        <path class="doll-smile" d="M108 96 Q120 106 132 96" />
+
+                        <!-- headmirror -->
+                        <circle class="doll-mirror" cx="120" cy="40" r="6" />
+                        <line class="doll-mirror-band" x1="98" y1="42" x2="142" y2="42" />
+                    </g>
+                </svg>
+            </div>
+
+            <div class="chart-tag">
+                <span class="tag-dot"></span>
+                PATIENT FILE
+            </div>
+
+            <p class="entry-date">ANOTHER YEAR OF YOU</p>
+
+            <h1>Happy Birthday,<br><span>Samiha.</span></h1>
+
+            <p class="hero-sub">
+                Somewhere between the lecture halls and the late‑night flashcards,
+                you're quietly becoming the doctor this world will be lucky to have.
+                Today, the only prescription is to feel exactly how loved you are.
+            </p>
+
+            <div class="hero-meta">
+                <div class="meta-item"><span>ROLE</span>Future Doctor</div>
+                <div class="meta-item"><span>STATUS</span>Absolutely Radiant</div>
+                <div class="meta-item"><span>VITALS</span>Heart: Full ❤️</div>
+            </div>
+
+            <button class="cta" onclick="scrollToSection('.letter-section')">
+                Read your letter <i class="fa-solid fa-arrow-down-long"></i>
+            </button>
+        </div>
+
+        <div class="scroll-cue"><span>SCROLL</span><i class="fa-solid fa-chevron-down"></i></div>
+    </section>
+
+    <!-- ===== LETTER ===== -->
+    <section class="section letter-section">
+        <div class="container narrow">
+            <div class="eyebrow"><i class="fa-solid fa-file-waveform"></i> CASE NOTES — PERSONAL</div>
+            <h2 class="section-title">A letter, off the record.</h2>
+
+            <div class="letter-sheet">
+                <div class="letter-header">
+                    <span>ATTENDING: Your Favorite Person</span>
+                    <span>PATIENT: Samiha</span>
+                </div>
+                <div class="letter-body">
+                    <p>Happy birthday to one of the most wonderful people I know.</p>
+                    <p>You're not only someone with a beautiful smile — you're someone quietly, stubbornly working to
+                        become a person who will one day change lives. That's not a small thing. That's rare.</p>
+                    <p>The path to medicine isn't kind. The long study sessions, the exams that feel personal, the
+                        sleepless nights, the mountain of books that never seems to shrink — and still, you keep moving
+                        forward. That persistence is one of the most beautiful things about you, even on the days it
+                        doesn't feel that way to you.</p>
+                    <p>I hope this new year brings you peace between the chaos, success that feels earned (because it
+                        is), and memories worth keeping long after the exams are forgotten.</p>
+                    <p>May you become the doctor you're dreaming of — but more than that, may you always stay exactly
+                        this kind, this bright, this <em>you</em>.</p>
+                    <p>Keep studying. Keep dreaming. Keep smiling like you mean it.<br>Never forget how special you are.
+                    </p>
+                </div>
+                <div class="letter-sign">With all my heart <span>— Your Favorite Person</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== JOURNEY ===== -->
+    <section class="section journey-section">
+        <div class="container">
+            <div class="eyebrow"><i class="fa-solid fa-route"></i> THE ROUNDS SO FAR</div>
+            <h2 class="section-title">Dreamer to doctor.</h2>
+
+            <div class="journey">
+                <div class="journey-track"></div>
+
+                <div class="journey-row">
+                    <div class="journey-node"><i class="fa-solid fa-heart"></i></div>
+                    <div class="journey-card">
+                        <span class="journey-stage">STAGE — THE SPARK</span>
+                        <h3>The dream</h3>
+                        <p>A quiet decision, made early: to become someone who helps people, and holds their hardest
+                            moments with steady hands.</p>
+                    </div>
+                </div>
+
+                <div class="journey-row reverse">
+                    <div class="journey-node"><i class="fa-solid fa-book-medical"></i></div>
+                    <div class="journey-card">
+                        <span class="journey-stage">STAGE — THE GRIND</span>
+                        <h3>The hard work</h3>
+                        <p>Textbooks taller than patience. Practicals, exams, 2am reviews. The part nobody claps for,
+                            but that builds everything.</p>
+                    </div>
+                </div>
+
+                <div class="journey-row">
+                    <div class="journey-node"><i class="fa-solid fa-stethoscope"></i></div>
+                    <div class="journey-card">
+                        <span class="journey-stage">STAGE — WHAT'S COMING</span>
+                        <h3>Dr. Samiha</h3>
+                        <p>One day, that dream gets a name tag. And it will fit perfectly, because you've already earned
+                            it a hundred times over.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== REMINDERS ===== -->
+    <section class="section">
+        <div class="container">
+            <div class="eyebrow"><i class="fa-solid fa-notes-medical"></i> DISCHARGE INSTRUCTIONS</div>
+            <h2 class="section-title">Take these daily.</h2>
+
+            <div class="rx-grid">
+                <div class="rx-card">
+                    <div class="rx-icon"><i class="fa-solid fa-heart"></i></div>
+                    <span class="rx-label">RX NO. 01</span>
+                    <h3>You are loved</h3>
+                    <p>More than you probably let yourself believe — by everyone lucky enough to actually know you.</p>
+                </div>
+                <div class="rx-card">
+                    <div class="rx-icon"><i class="fa-solid fa-moon"></i></div>
+                    <span class="rx-label">RX NO. 02</span>
+                    <h3>Dream without limits</h3>
+                    <p>Your story is still being written. Make every chapter one you'd want to read twice.</p>
+                </div>
+                <div class="rx-card">
+                    <div class="rx-icon"><i class="fa-solid fa-star"></i></div>
+                    <span class="rx-label">RX NO. 03</span>
+                    <h3>Keep your light on</h3>
+                    <p>Keep learning, keep laughing too loud, and never let the syllabus dim what makes you, you.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== GALLERY ===== -->
+    <section class="section">
+        <div class="container">
+            <div class="eyebrow"><i class="fa-solid fa-images"></i> IMAGING RESULTS</div>
+            <h2 class="section-title">Moments on file.</h2>
+
+            <div class="gallery">
+                <div class="photo"><img src="pic1.jpg" alt="Memory 1">
+                    <div class="photo-tag">01</div>
+                </div>
+                <div class="photo"><img src="pic2.jpg" alt="Memory 2">
+                    <div class="photo-tag">02</div>
+                </div>
+                <div class="photo"><img src="pic3.1.jpg" alt="Memory 3">
+                    <div class="photo-tag">03</div>
+                </div>
+                <div class="photo"><img src="pic3.jpg" alt="Memory 4">
+                    <div class="photo-tag">04</div>
+                </div>
+                <div class="photo"><img src="pic4.jpg" alt="Memory 5">
+                    <div class="photo-tag">05</div>
+                </div>
+                <div class="photo"><img src="pic5.jpg" alt="Memory 6">
+                    <div class="photo-tag">06</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FINAL MESSAGE ===== -->
+    <section class="section final-section">
+        <div class="container narrow">
+            <div class="final-card">
+                <div class="final-icon"><i class="fa-solid fa-user-doctor"></i></div>
+                <span class="mini-tag">FINAL NOTE — READ ON DUTY</span>
+                <h2>"The world needs<br>kind doctors like you."</h2>
+                <p>May your hands always heal, your judgment always steady, and your heart stay exactly as soft as it is
+                    now.</p>
+                <div class="heartbeat"><i class="fa-solid fa-heart-pulse"></i></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== GIFT ===== -->
+    <section class="section">
+        <div class="container narrow">
+            <div class="eyebrow"><i class="fa-solid fa-gift"></i> SEALED ENVELOPE</div>
+            <h2 class="section-title">One more thing.</h2>
+
+            <div class="gift-area">
+                <div class="gift" id="giftBox" onclick="openGift()">
+                    <div class="gift-seal"><i class="fa-solid fa-heart"></i></div>
+                    <div class="gift-flap"></div>
+                    <div class="gift-body"></div>
+                </div>
+
+                <button class="cta small" onclick="openGift()">Open it <i class="fa-solid fa-heart"></i></button>
+
+                <div id="giftMessage" class="gift-message">
+                    <div class="gift-heart"><i class="fa-solid fa-heart"></i></div>
+                    <p>
+                        আজ যদি তোমাকে কোনো উপহার দিতে পারতাম, তবে তা হতো—যারা তোমাকে ভালোবাসে, তারা তোমাকে যেভাবে দেখে,
+                        ঠিক সেভাবে নিজেকে দেখার ক্ষমতা। তখন তুমি বুঝতে পারতে তুমি কতটা অনন্য।
+
+                        নিজের স্বপ্নের পেছনে ছুটে চলো, হবু ডাক্তার সামিহা।
+                        শুভ জন্মদিন, এক সুন্দর মনের মানুষ।<br>Happy birthday, beautiful soul.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-heart"><i class="fa-solid fa-heart-pulse"></i></div>
+        <p>Made with care, for Samiha</p>
+        <span>FUTURE DOCTOR · KIND HEART · FOREVER SPECIAL</span>
+    </footer>
+
+    <script>
+        window.addEventListener("load", () => {
+            setTimeout(() => document.getElementById("loader").classList.add("hide"), 1400);
+        });
+
+        function scrollToSection(sel) {
+            document.querySelector(sel).scrollIntoView({ behavior: "smooth" });
+        }
+
+        function playMusic() {
+            const music = document.getElementById("birthdayMusic");
+            const button = document.getElementById("musicButton");
+            if (music.paused) {
+                music.play().then(() => {
+                    button.classList.add("playing");
+                    button.innerHTML = '<i class="fa-solid fa-pause"></i>';
+                }).catch(() => alert("Music could not be played. Please check the audio file."));
+            } else {
+                music.pause();
+                button.classList.remove("playing");
+                button.innerHTML = '<i class="fa-solid fa-play"></i>';
+            }
+        }
+
+        function openGift() {
+            const message = document.getElementById("giftMessage");
+            const gift = document.getElementById("giftBox");
+            message.classList.toggle("show");
+            gift.classList.toggle("opened");
+            if (message.classList.contains("show")) createHearts();
+        }
+
+        function createHearts() {
+            const hearts = ["❤️", "💖", "💕", "✨", "🩷"];
+            for (let i = 0; i < 22; i++) {
+                setTimeout(() => {
+                    const heart = document.createElement("div");
+                    heart.className = "floating-heart";
+                    heart.innerText = hearts[Math.floor(Math.random() * hearts.length)];
+                    heart.style.left = Math.random() * 100 + "%";
+                    heart.style.animationDuration = (4 + Math.random() * 4) + "s";
+                    heart.style.fontSize = (14 + Math.random() * 22) + "px";
+                    document.body.appendChild(heart);
+                    setTimeout(() => heart.remove(), 8000);
+                }, i * 90);
+            }
+        }
+    </script>
+
+</body>
+
+</html>
